@@ -102,7 +102,7 @@ export default function PageLogin() {
                             asChild
                             variant="link"
                             className="px-2">
-                            <Link href="#">Create account</Link>
+                            <Link href="/sign-up">Create account</Link>
                         </Button>
                     </p>
                 </div>

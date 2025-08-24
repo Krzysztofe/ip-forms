@@ -2,12 +2,16 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import Link from "next/link";
+import { signUp } from "@/actions/auth/signUp";
 
-export default function LoginPage() {
+export default function PageSignUp() {
+
+
+
   return (
     <section className="flex min-h-screen bg-zinc-50 px-4 py-16 md:py-32 dark:bg-transparent">
       <form
-        action=""
+        action={signUp}
         className="bg-card m-auto h-fit w-full max-w-sm rounded-[calc(var(--radius)+.125rem)] border p-0.5 shadow-md dark:[--color-muted:var(--color-zinc-900)]"
       >
         <div className="p-8 pb-6">
@@ -70,7 +74,7 @@ export default function LoginPage() {
 
             <div className="space-y-2">
               <Label htmlFor="email" className="block text-sm">
-                Username
+              Email
               </Label>
               <Input type="email" required name="email" id="email" />
             </div>
@@ -96,7 +100,7 @@ export default function LoginPage() {
           <p className="text-accent-foreground text-center text-sm">
             Have an account ?
             <Button asChild variant="link" className="px-2">
-              <Link href="#">Sign In</Link>
+              <Link href="/login">Sign In</Link>
             </Button>
           </p>
         </div>
